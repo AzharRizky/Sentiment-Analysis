@@ -131,11 +131,13 @@ function onClick(){
     // Score prediksi dengan nilai 0 s/d 1
     let score = predict(inputText);
  
+    let score_percentage = Math.floor((score/1.0) * 100);
+ 
     // Kondisi penentuan hasil prediksi berdasarkan nilai score
     if (score > 0.5) {
-        alert ('Positive Review \n'+score);
+        alert ('Positive Review \n'+score_percentage+'%');
     } else {
-        alert ('Negative Review \n'+score);
+        alert ('Negative Review \n'+score_percentage+'%');
     }
 }
 // -----------------------------------
